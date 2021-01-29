@@ -1,0 +1,53 @@
+body{
+    
+   text-align: center;
+}
+#page-header
+{
+    color: grey;
+}
+
+.container {
+    display: inline-flex;
+    width: 300px;
+    padding: 0px;
+    
+}
+
+#li-container
+{
+    background-color: rgb(96, 144, 233);
+    padding-right: 0px;
+    display: flex;
+    align-self: start;
+    border: white 2px solid;
+    border-radius: 5px;
+    justify-content: space-between;
+    color: white;
+}
+/* #number-element
+{
+    display: flex;
+    align-items: flex-end;
+} */
+
+
+a{
+    margin-right: 20px;
+}
+#form-container
+{
+    margin: 5px;
+}
+
+#sumbit-button:hover
+{
+    background-color: grey;
+}
+.phone
+{
+    color: black;
+}
+.delete:hover{
+    background: rgb(226, 94, 94)
+}

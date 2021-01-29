@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> ContactList </title>
+    <script src="https://kit.fontawesome.com/0c13de2b67.js" crossorigin="anonymous"></script>
+    <link href="/css/home.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    
+    <h1 id="page-header">
+        <i class="fas fa-address-book"></i>
+        Contact List
+
+    </h1>
+    <div class="container">
+        <ul id="ul-container" style="list-style-type:none">
+            <% for(let i of contact_list) {%>
+                <li id="li-container">
+                        <a id="name-element">
+                            <i class="phone fas fa-phone-square-alt"></i>
+                            <%= i.name %>
+                        </a>
+                        <a id="number-element">
+                            <%= i.number %>
+                        </a>
+                       
+                        <div>
+                            <a href="/delete-contact/?id=<%=i._id %>">
+                                <i class="delete phone far fa-window-close"></i>
+                            </a>
+                        </div>
+
+                </li>
+
+                <% } %>
+        </ul>
+    </div>
+
+    <div>
+        <form action="./create-contact" method="POST" id="form-container">
+            <input type="text" name="name" required placeholder="Enter name">
+            <input type="number" name="number" required placeholder="Enter phone">
+            <input id="sumbit-button" type="submit" value="Add"> 
+        </form>
+    </div>
+    <script src="/js/home.js"></script>
+</body>
+
+</html>
